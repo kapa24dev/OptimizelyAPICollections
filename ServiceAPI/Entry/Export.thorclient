@@ -1,0 +1,39 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "method": "GET",
+    "header": [
+      {
+        "key": "Authorization",
+        "value": "bearer {{AccessToken}}",
+        "type": "text"
+      }
+    ],
+    "body": {
+      "mode": "none",
+      "formdata": [
+        {
+          "id": "c352d9f9-0779-4b48-bcfe-d03dd257efc2",
+          "key": "file",
+          "disabled": false,
+          "type": "file",
+          "src": "c:/Data/Temp/software/original/Catalog.zip"
+        }
+      ]
+    },
+    "url": {
+      "raw": "{{SiteUrl}}/episerverapi/commerce/export/catalog/Test2"
+    }
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  }
+}

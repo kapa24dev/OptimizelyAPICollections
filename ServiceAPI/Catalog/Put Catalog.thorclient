@@ -1,0 +1,39 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "method": "PUT",
+    "header": [
+      {
+        "key": "Content-Type",
+        "value": "application/json"
+      },
+      {
+        "key": "Authorization",
+        "value": "bearer {{AccessToken}}"
+      },
+      {
+        "key": "Accept",
+        "value": "application/json"
+      }
+    ],
+    "body": {
+      "mode": "raw",
+      "raw": "{\r\n    \"ApplicationId\": \"985b8052-54cf-4e96-8268-eeebf78c9056\",\r\n    \"EndDate\": \"2035-04-21T22:00:00Z\",\r\n    \"StartDate\": \"2015-04-21T22:00:00Z\",\r\n    \"IsActive\": true,\r\n    \"IsPrimary\": false,\r\n    \"Owner\": \"\",\r\n    \"SortOrder\": 0,\r\n    \"Name\": \"Fashion10\",\r\n    \"DefaultCurrency\": \"USD\",\r\n    \"DefaultLanguage\": \"en\",\r\n    \"WeightBase\": \"lbs\",\r\n    \"Languages\": [\r\n      {\r\n        \"LanguageCode\": \"en\",\r\n        \"Catalog\": \"Fashion9\",\r\n        \"UriSegment\": \"fashion9\"\r\n      },\r\n      {\r\n        \"LanguageCode\": \"sv\",\r\n        \"Catalog\": \"Fashion9\",\r\n        \"UriSegment\": \"fashion9\"\r\n      }\r\n    ]\r\n}"
+    },
+    "url": {
+      "raw": "{{SiteUrl}}/episerverapi/commerce/catalogs/Fashion"
+    },
+    "description": "Set Default Language from 'en' to 'sv'\nColumn 'Name' doesn't allow null."
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  }
+}

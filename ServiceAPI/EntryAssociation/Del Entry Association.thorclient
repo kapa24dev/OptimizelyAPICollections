@@ -1,0 +1,38 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "method": "DELETE",
+    "header": [
+      {
+        "key": "Content-Type",
+        "value": "application/json"
+      },
+      {
+        "key": "Authorization",
+        "value": "bearer {{AccessToken}}"
+      },
+      {
+        "key": "Accept",
+        "value": "application/json"
+      }
+    ],
+    "body": {
+      "mode": "raw",
+      "raw": "{\n    \"MetaFields\": [\n        {\n            \"Name\": \"DisplayName\",\n            \"Type\": \"ShortString\",\n            \"Data\": \"A Name\"\n        },\n        {\n            \"Name\": \"Epi_IsPublished\",\n            \"Type\": \"Boolean\",\n            \"Data\": \"\"\n        },\n        {\n            \"Name\": \"Epi_StartPublish\",\n            \"Type\": \"DateTime\",\n            \"Data\": \"\"\n        },\n        {\n            \"Name\": \"Epi_StopPublish\",\n            \"Type\": \"DateTime\",\n            \"Data\": \"\"\n        },\n        {\n            \"Name\": \"Facet_Color\",\n            \"Type\": \"LongString\",\n            \"Data\": \"Black\"\n        },\n        {\n            \"Name\": \"Facet_Size\",\n            \"Type\": \"LongString\",\n            \"Data\": \"Small\"\n        },\n        {\n            \"Name\": \"Info_Description\",\n            \"Type\": \"LongHtmlString\",\n            \"Data\": \"<p>Item Specific Description Etiam porta sem malesuada magna mollis euismod. Maecenas faucibus mollis interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\"\n        },\n        {\n            \"Name\": \"RelatedItem\",\n            \"Type\": \"ShortString\",\n            \"Data\": \"\"\n        },\n        {\n            \"Name\": \"_ExcludedCatalogEntryMarkets\",\n            \"Type\": \"DictionaryMultiValue\",\n            \"Data\": \"ANZ\"\n        }\n    ],\n    \"SeoInformation\": \n        {\n            \"Title\": null,\n            \"Uri\": \"A.aspx\",\n            \"UriSegment\": \"A\",\n            \"Description\": null,\n            \"Keywords\": null,\n            \"LanguageCode\": \"en\"\n        },\n    \"Code\": \"A\",\n    \"Name\": \"A Name\",\n    \"StartDate\": \"2010-09-01T13:00:00Z\",\n    \"EndDate\": \"2019-10-02T01:00:00Z\",\n    \"MetaClass\": \"Fashion_Item_Class\",\n    \"Catalog\": \"Departmental Catalog\",\n    \"Prices\": [\n        {\n            \"Title\": \"$1,042.00\",\n            \"Type\": \"Price\",\n            \"Href\": \"/episerverapi/commerce/entries/Tops-Tunics-CowlNeck-Black-Small/prices/1891\",\n            \"Properties\": null\n        }\n    ],\n    \"EntryType\": \"Variation\",\n    \"ChildCatalogEntries\": [],\n    \"InventoryStatus\": \"Enabled\",\n    \"WarehouseInventories\": [ ],\n    \"Associations\": [],\n    \"Assets\": [],\n    \"Nodes\": [],\n    \"Variation\": {\n        \"MinQuantity\": 1,\n        \"MaxQuantity\": 50,\n        \"Weight\": 5,\n        \"TaxCategory\": \"\"\n    }\n}"
+    },
+    "url": {
+      "raw": "{{SiteUrl}}/episerverapi/commerce/entries/{{DefaultEntryCode}}/associations/Default"
+    }
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  }
+}

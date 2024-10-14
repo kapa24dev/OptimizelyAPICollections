@@ -1,0 +1,40 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "method": "POST",
+    "header": [
+      {
+        "key": "Content-Type",
+        "value": "application/json",
+        "name": "Content-Type",
+        "type": "text"
+      },
+      {
+        "key": "Authorization",
+        "value": "bearer {{AccessToken}}"
+      },
+      {
+        "key": "Accept",
+        "value": "application/json"
+      }
+    ],
+    "body": {
+      "mode": "raw",
+      "raw": "\t    {\r\n\t        \"CatalogNodeCode\": null,\r\n\t        \"CatalogEntryCode\": \"Tops-Tunics-CowlNeck-Black-Small2\",\r\n\t        \"AssetKey\": \"62bc0a37-d2c5-49c5-9ecf-ac37c456de8b\",\r\n\t        \"AssetType\": \"episerver.core.icontentimage\",\r\n\t        \"GroupName\": \"small\",\r\n\t        \"SortOrder\": 0\r\n\t    }"
+    },
+    "url": {
+      "raw": "{{SiteUrl}}/episerverapi/commerce/entries/{{DefaultEntryCode}}/assets"
+    }
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "request": {
+    "method": "POST",
+    "name": "https://localhost:5000/api/episerver/connect/token",
+    "url": {
+      "raw": "{{SiteUrl}}/api/episerver/connect/token",
+      "query": []
+    },
+    "header": [
+      {
+        "key": "Content-Type",
+        "value": "application/x-www-form-urlencoded"
+      }
+    ],
+    "body": {
+      "mode": "urlencoded",
+      "urlencoded": [
+        {
+          "type": "text",
+          "key": "client_id",
+          "value": "postman-client"
+        },
+        {
+          "type": "text",
+          "key": "client_secret",
+          "value": "postman"
+        },
+        {
+          "type": "text",
+          "key": "scope",
+          "value": "epi_service_api"
+        },
+        {
+          "type": "text",
+          "key": "grant_type",
+          "value": "password"
+        },
+        {
+          "type": "text",
+          "key": "username",
+          "value": "admin@example.com"
+        },
+        {
+          "type": "text",
+          "key": "password",
+          "value": "Episerver123!"
+        }
+      ]
+    }
+  },
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  },
+  "response": {
+    "keys": [
+      "access_token",
+      "token_type",
+      "expires_in"
+    ]
+  }
+}

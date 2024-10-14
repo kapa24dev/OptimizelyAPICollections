@@ -1,0 +1,89 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "method": "POST",
+    "header": [
+      {
+        "key": "Content-Type",
+        "value": "application/x-www-form-urlencoded",
+        "name": "Content-Type",
+        "type": "text"
+      }
+    ],
+    "body": {
+      "mode": "urlencoded",
+      "urlencoded": [
+        {
+          "id": "9deffb91-2437-4f67-8c08-05bb0bad60e7",
+          "key": "grant_type",
+          "value": "anonymous",
+          "disabled": false,
+          "type": "text"
+        },
+        {
+          "id": "f405af3a-cd93-418f-90e5-3fb47cf9edd7",
+          "key": "client_id",
+          "value": "anon-client",
+          "disabled": false,
+          "type": "text"
+        },
+        {
+          "id": "692d3080-e925-4b0f-a47f-adf86128784b",
+          "key": "scope",
+          "value": "anonymous_id",
+          "disabled": false,
+          "type": "text"
+        },
+        {
+          "id": "013b8a81-c393-4b12-90b4-0fbf09a9b549",
+          "key": "client_secret",
+          "value": "anon",
+          "disabled": false,
+          "type": "text"
+        },
+        {
+          "id": "6a35bbf5-a42d-4a6a-9362-362658d06f9c",
+          "key": "grant_type",
+          "value": "password",
+          "disabled": true,
+          "type": "text"
+        },
+        {
+          "id": "cd38c09b-0d00-4765-9086-011eb41a726a",
+          "key": "username",
+          "value": "admin@example.com",
+          "disabled": true,
+          "type": "text"
+        },
+        {
+          "id": "7708b601-76cb-490e-ad62-9611dc242e71",
+          "key": "password",
+          "value": "Episerver123!",
+          "disabled": true,
+          "type": "text"
+        }
+      ]
+    },
+    "url": {
+      "raw": "{{SiteUrl}}/api/episerver/connect/token/anonymous"
+    }
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  },
+  "response": {
+    "keys": [
+      "access_token",
+      "token_type",
+      "expires_in"
+    ]
+  }
+}

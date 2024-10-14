@@ -1,0 +1,38 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "method": "POST",
+    "header": [
+      {
+        "key": "Content-Type",
+        "value": "application/xml"
+      },
+      {
+        "key": "Authorization",
+        "value": "bearer {{AccessToken}}"
+      },
+      {
+        "key": "Accept",
+        "value": "application/json"
+      }
+    ],
+    "body": {
+      "mode": "raw",
+      "raw": "<Organization>\r\n  <PrimaryKeyId>2228eb2d-8839-432d-a6f7-32cf30e5fabc</PrimaryKeyId>\r\n  <Addresses></Addresses>\r\n  <ChildOrganizations>\r\n  </ChildOrganizations>\r\n  <Contacts>\r\n  </Contacts>\r\n  <OrganizationType>Organization</OrganizationType>\r\n  <OrgCustomerGroup>Partner</OrgCustomerGroup>\r\n</Organization>\r\n"
+    },
+    "url": {
+      "raw": "{{SiteUrl}}/episerverapi/commerce/customers/organization"
+    }
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  }
+}

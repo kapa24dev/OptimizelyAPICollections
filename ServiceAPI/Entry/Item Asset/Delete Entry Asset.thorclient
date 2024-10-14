@@ -1,0 +1,37 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "method": "GET",
+    "header": [
+      {
+        "key": "Content-Type",
+        "value": "application/x-www-form-urlencoded",
+        "type": "text"
+      },
+      {
+        "key": "Authorization",
+        "value": "bearer {{AccessToken}}",
+        "type": "text"
+      },
+      {
+        "key": "Accept",
+        "value": "application/json",
+        "type": "text"
+      }
+    ],
+    "url": {
+      "raw": "{{SiteUrl}}/episerverapi/commerce/entries/P-39813617/assets"
+    }
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  }
+}

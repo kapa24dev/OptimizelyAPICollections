@@ -1,0 +1,86 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "method": "POST",
+    "header": [
+      {
+        "key": "Content-Type",
+        "value": "application/x-www-form-urlencoded",
+        "name": "Content-Type",
+        "type": "text"
+      }
+    ],
+    "body": {
+      "mode": "urlencoded",
+      "urlencoded": [
+        {
+          "key": "grant_type",
+          "value": "client_credentials",
+          "type": "text",
+          "disabled": true
+        },
+        {
+          "key": "client_id",
+          "value": "postman-client",
+          "type": "text"
+        },
+        {
+          "key": "client_secret",
+          "value": "postman",
+          "type": "text"
+        },
+        {
+          "key": "scope",
+          "value": "epi_service_api",
+          "type": "text"
+        },
+        {
+          "key": "grant_type",
+          "value": "password",
+          "description": "to use this, set options.AllowResourceOwnerPasswordFlow = true;",
+          "type": "text"
+        },
+        {
+          "key": "username",
+          "value": "admin@example.com",
+          "type": "text"
+        },
+        {
+          "key": "password",
+          "value": "Episerver123!",
+          "type": "text"
+        }
+      ]
+    },
+    "url": {
+      "raw": "{{SiteUrl}}/api/episerver/connect/token"
+    }
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ],
+    "setvars": [
+      {
+        "id": "541d9ad6-6f2d-4b1b-a12e-c35771d9cbfb",
+        "key": "AccessToken",
+        "value": "response.data.access_token",
+        "disabled": false,
+        "type": "text"
+      }
+    ]
+  },
+  "response": {
+    "keys": [
+      "access_token",
+      "token_type",
+      "expires_in"
+    ]
+  }
+}

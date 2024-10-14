@@ -1,0 +1,46 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "method": "POST",
+    "header": [
+      {
+        "key": "Content-Type",
+        "value": "application/json",
+        "type": "text"
+      },
+      {
+        "key": "Authorization",
+        "value": "bearer {{AccessToken}}",
+        "type": "text"
+      },
+      {
+        "key": "Accept",
+        "value": "application/json",
+        "type": "text"
+      }
+    ],
+    "body": {
+      "mode": "raw",
+      "raw": "{    \r\n    \"name\": \"Default\",\r\n    \"customerId\": \"533211bf-ce9a-4392-a760-9f7e67ef1b07\",\r\n    \"market\": \"SWE\",\r\n    \"currency\": \"USD\",\r\n    \"lastUpdated\": \"2023-02-17T06:53:37.017+00:00\",\r\n    \"shipments\": [\r\n        {\r\n            \"id\": \"d3146ebc-475c-52b7-b9c7-4ddc98e6341b\",\r\n            \"shippingAddress\": {\r\n                \"firstName\": \"Cruz\",\r\n                \"lastName\": \"Graham\",\r\n                \"line1\": \"Kungsgatan 446\",\r\n                \"line2\": \"\",\r\n                \"city\": \"Gävle\",\r\n                \"countryName\": \"Sweden\",\r\n                \"countryCode\": null,\r\n                \"postalCode\": \"\",\r\n                \"regionName\": \"\",\r\n                \"email\": \"cruz.graham@example.com\",\r\n                \"phoneNumber\": \"\",\r\n                \"name\": null\r\n            },\r\n            \"shippingMethodId\": \"8f740d90-7ba9-4a3b-8af5-7146b9cb2e6b\",\r\n            \"lineItems\": [\r\n                {\r\n                    \"id\": \"ec5196cb-6c2f-55ab-84f7-ccbdcb01e52a\",\r\n                    \"contentId\": \"447356c8-ec01-4308-a1be-4c04549fd99a\",\r\n                    \"code\": \"SKU-38424534\",\r\n                    \"placedPrice\": 22.000000000,\r\n                    \"quantity\": 1.0,\r\n                    \"displayName\": \"Curvy Dress\",\r\n                    \"isGift\": false\r\n                }\r\n            ]          \r\n        }\r\n    ],\r\n    \"payments\": [],\r\n    \"couponCodes\": []\r\n}",
+      "options": {
+        "raw": {
+          "language": "json"
+        }
+      }
+    },
+    "url": {
+      "raw": "{{SiteUrl}}/api/episerver/v3.0/me/carts/"
+    }
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  }
+}

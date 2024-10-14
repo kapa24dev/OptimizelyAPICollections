@@ -1,0 +1,38 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "method": "POST",
+    "header": [
+      {
+        "key": "Content-Type",
+        "value": "application/json"
+      },
+      {
+        "key": "Authorization",
+        "value": "bearer {{AccessToken}}"
+      },
+      {
+        "key": "Accept",
+        "value": "application/json"
+      }
+    ],
+    "body": {
+      "mode": "raw",
+      "raw": "{\n    \"IsActive\": true,\n    \"MetaFields\": [\n        {\n            \"Data\": \"brand_en\",\n            \"Name\": \"Brand\",\n            \"Type\": \"ShortString\"\n        }\n    ],\n    \"Code\": \"kapa_2\",\n    \"Name\": \"kapa2\",\n    \"StartDate\": \"2015-04-22T11:48:27Z\",\n    \"EndDate\": \"2025-04-22T11:48:27Z\",\n    \"MetaClass\": \"FashionVariant\",\n    \"Catalog\": \"Fashion\",\n    \"EntryType\": \"Variant\"\n}"
+    },
+    "url": {
+      "raw": "{{SiteUrl}}/episerverapi/commerce/entries/commondraft/en"
+    }
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  }
+}

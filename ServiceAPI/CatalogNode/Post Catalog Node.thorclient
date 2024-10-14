@@ -1,0 +1,38 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "method": "POST",
+    "header": [
+      {
+        "key": "Content-Type",
+        "value": "application/json"
+      },
+      {
+        "key": "Authorization",
+        "value": "bearer {{AccessToken}}"
+      },
+      {
+        "key": "Accept",
+        "value": "application/json"
+      }
+    ],
+    "body": {
+      "mode": "raw",
+      "raw": "{\n    \"IsActive\": true,\n    \"MetaFields\": [\n        {\n            \"Data\": [\n                {\n                    \"Language\": \"en\",\n                    \"Value\": \"Tops\"\n                }\n            ],\n            \"Name\": \"DisplayName\",\n            \"Type\": \"ShortString\"\n        },\n        {\n            \"Data\": [\n                {\n                    \"Language\": \"en\",\n                    \"Value\": \"<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper. Maecenas faucibus mollis interdum.</p>\"\n                }\n            ],\n            \"Name\": \"Info_Description\",\n            \"Type\": \"LongHtmlString\"\n        },\n        {\n            \"Data\": [],\n            \"Name\": \"Info_Promotional_Message\",\n            \"Type\": \"LongHtmlString\"\n        }\n    ],\n    \"SeoInformation\": [\n        {\n            \"LanguageCode\": \"en\",\n            \"Title\": null,\n            \"Uri\": \"Tops.aspx\",\n            \"UriSegment\": \"Tops\",\n            \"Description\": null,\n            \"Keywords\": null\n        }\n    ],\n    \"Code\": \"Tops\",\n    \"Name\": \"Tops\",\n    \"StartDate\": \"2010-09-01T07:00:00Z\",\n    \"EndDate\": \"2020-10-01T07:00:00Z\",\n    \"MetaClass\": \"FashionStoreSubLandingNode\",\n    \"Catalog\": \"Departmental Catalog\",\n    \"SortOrder\": 0,\n    \"Assets\": [\n        {\n            \"Title\": \"http://commerceserviceapi/globalassets/catalogs/tops.jpg/\",\n            \"Type\": \"Asset\",\n            \"Href\": \"/episerverapi/commerce/nodes/Tops/assets/2545/episerver.core.icontentimage\",\n            \"Properties\": null\n        },\n        {\n            \"Title\": \"http://commerceserviceapi/globalassets/catalogs/980x300.png/\",\n            \"Type\": \"Asset\",\n            \"Href\": \"/episerverapi/commerce/nodes/Tops/assets/32/episerver.core.icontentimage\",\n            \"Properties\": null\n        }\n    ],\n    \"Children\": [\n        {\n            \"Title\": \"Tops-Tunics\",\n            \"Type\": \"CatalogNode\",\n            \"Href\": \"/episerverapi/commerce/nodes/Tops-Tunics\",\n            \"Properties\": [\n                {\n                    \"Name\": \"Code\",\n                    \"Value\": \"Tops-Tunics\"\n                },\n                {\n                    \"Name\": \"Image\",\n                    \"Value\": \"http://commerceserviceapi/globalassets/catalogs/tops/tops-tunics.jpg/thumbnail\"\n                }\n            ]\n        },\n        {\n            \"Title\": \"Tops-Sweaters\",\n            \"Type\": \"CatalogNode\",\n            \"Href\": \"/episerverapi/commerce/nodes/Tops-Sweaters\",\n            \"Properties\": [\n                {\n                    \"Name\": \"Code\",\n                    \"Value\": \"Tops-Sweaters\"\n                },\n                {\n                    \"Name\": \"Image\",\n                    \"Value\": \"http://commerceserviceapi/globalassets/catalogs/tops/tops-sweaters.jpg/thumbnail\"\n                }\n            ]\n        },\n        {\n            \"Title\": \"Tops-Sweatshirts\",\n            \"Type\": \"CatalogNode\",\n            \"Href\": \"/episerverapi/commerce/nodes/Tops-Sweatshirts\",\n            \"Properties\": [\n                {\n                    \"Name\": \"Code\",\n                    \"Value\": \"Tops-Sweatshirts\"\n                },\n                {\n                    \"Name\": \"Image\",\n                    \"Value\": \"http://commerceserviceapi/globalassets/catalogs/tops/tops-sweatshirts.jpg/thumbnail\"\n                }\n            ]\n        },\n        {\n            \"Title\": \"Tops-Blouses\",\n            \"Type\": \"CatalogNode\",\n            \"Href\": \"/episerverapi/commerce/nodes/Tops-Blouses\",\n            \"Properties\": [\n                {\n                    \"Name\": \"Code\",\n                    \"Value\": \"Tops-Blouses\"\n                },\n                {\n                    \"Name\": \"Image\",\n                    \"Value\": \"http://commerceserviceapi/globalassets/catalogs/tops/tops-blouses.jpg/thumbnail\"\n                }\n            ]\n        }\n    ],\n    \"Entries\": []\n}"
+    },
+    "url": {
+      "raw": "{{SiteUrl}}/episerverapi/commerce/nodes/"
+    }
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  }
+}

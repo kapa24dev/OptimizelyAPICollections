@@ -1,0 +1,38 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "method": "POST",
+    "header": [
+      {
+        "key": "Content-Type",
+        "value": "application/json"
+      },
+      {
+        "key": "Authorization",
+        "value": "bearer {{AccessToken}}"
+      },
+      {
+        "key": "Accept",
+        "value": "application/json"
+      }
+    ],
+    "body": {
+      "mode": "raw",
+      "raw": "{\n    \"MetaFields\": [\n        {\n            \"Data\": \"Mens\",\n            \"Name\": \"DisplayName\",\n            \"Type\": \"ShortString\"\n        },\n        {\n            \"Data\": \"\",\n            \"Name\": \"Epi_IsPublished\",\n            \"Type\": \"Boolean\"\n        },\n        {\n            \"Data\": \"\",\n            \"Name\": \"Epi_StartPublish\",\n            \"Type\": \"DateTime\"\n        },\n        {\n            \"Data\": \"\",\n            \"Name\": \"Epi_StopPublish\",\n            \"Type\": \"DateTime\"\n        }\n    ],\n    \"SeoInformation\": {\n        \"Title\": null,\n        \"Uri\": \"Mens-en.aspx\",\n        \"UriSegment\": \"mens\",\n        \"Description\": null,\n        \"Keywords\": null\n    },\n    \"Code\": \"mens\",\n    \"ParentNodeCode\": null,\n    \"Name\": \"Mens\",\n    \"StartDate\": \"2015-04-22T11:39:20Z\",\n    \"EndDate\": \"2035-04-21T22:00:00Z\",\n    \"MetaClass\": \"FashionNode\",\n    \"Catalog\": \"Fashion\",\n    \"SortOrder\": 0,\n    \"ParentNode\": null,\n    \"Assets\": [],\n    \"Children\": [\n        {\n            \"Title\": \"Mens Shoes\",\n            \"Type\": \"CatalogNode\",\n            \"Href\": \"/episerverapi/commerce/nodes/shoes\",\n            \"Properties\": [\n                {\n                    \"Name\": \"Code\",\n                    \"Value\": \"shoes\"\n                }\n            ]\n        },\n        {\n            \"Title\": \"Mens Jackets\",\n            \"Type\": \"CatalogNode\",\n            \"Href\": \"/episerverapi/commerce/nodes/jackets\",\n            \"Properties\": [\n                {\n                    \"Name\": \"Code\",\n                    \"Value\": \"jackets\"\n                }\n            ]\n        },\n        {\n            \"Title\": \"Mens Shirts\",\n            \"Type\": \"CatalogNode\",\n            \"Href\": \"/episerverapi/commerce/nodes/shirts\",\n            \"Properties\": [\n                {\n                    \"Name\": \"Code\",\n                    \"Value\": \"shirts\"\n                }\n            ]\n        },\n        {\n            \"Title\": \"Mens Sweatshirts\",\n            \"Type\": \"CatalogNode\",\n            \"Href\": \"/episerverapi/commerce/nodes/sweatshirts\",\n            \"Properties\": [\n                {\n                    \"Name\": \"Code\",\n                    \"Value\": \"sweatshirts\"\n                }\n            ]\n        }\n    ],\n    \"Entries\": [\n        {\n            \"Title\": \"Mens Fashionable Bundle\",\n            \"Type\": \"CatalogEntry\",\n            \"Href\": \"/episerverapi/commerce/entries/Mens-Fashionable-Bundle_1\",\n            \"Properties\": [\n                {\n                    \"Name\": \"Code\",\n                    \"Value\": \"Mens-Fashionable-Bundle_1\"\n                },\n                {\n                    \"Name\": \"Image\",\n                    \"Value\": \"http://localhost:1230/globalassets/catalog/mens_shirt_bundle.png/thumbnail\"\n                }\n            ]\n        }\n    ]\n}"
+    },
+    "url": {
+      "raw": "{{SiteUrl}}/episerverapi/commerce/nodes/commondraft/sv"
+    }
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "method": "POST",
+    "header": [
+      {
+        "key": "Content-Type",
+        "value": "application/json"
+      },
+      {
+        "key": "Authorization",
+        "value": "bearer {{AccessToken}}"
+      },
+      {
+        "key": "Accept",
+        "value": "application/json"
+      }
+    ],
+    "body": {
+      "mode": "raw",
+      "raw": "{\n    \"IsActive\": true,\n    \"MetaFields\": [\n        {\n            \"Data\": [],\n            \"Name\": \"AvailableColors\",\n            \"Type\": \"EnumMultiValue\"\n        },\n        {\n            \"Data\": [],\n            \"Name\": \"AvailableSizes\",\n            \"Type\": \"EnumMultiValue\"\n        },\n        {\n            \"Data\": [\n                {\n                    \"Language\": \"sv\",\n                    \"Value\": \"brand_sv_updated\"\n                }\n            ],\n            \"Name\": \"Brand\",\n            \"Type\": \"ShortString\"\n        },\n        {\n            \"Data\": [\n                {\n                    \"Language\": \"sv\",\n                    \"Value\": \"muph\"\n                }\n            ],\n            \"Name\": \"DisplayName\",\n            \"Type\": \"ShortString\"\n        },\n        {\n            \"Data\": [],\n            \"Name\": \"Description\",\n            \"Type\": \"LongHtmlString\"\n        },\n        {\n            \"Data\": [],\n            \"Name\": \"LongDescription\",\n            \"Type\": \"LongHtmlString\"\n        },\n        {\n            \"Data\": [],\n            \"Name\": \"ProductTeaser\",\n            \"Type\": \"LongHtmlString\"\n        },\n        {\n            \"Data\": [],\n            \"Name\": \"Sizing\",\n            \"Type\": \"LongHtmlString\"\n        },\n        {\n            \"Data\": [],\n            \"Name\": \"_ExcludedCatalogEntryMarkets\",\n            \"Type\": \"EnumMultiValue\"\n        }\n    ],\n    \"SeoInformation\": [\n        {\n            \"LanguageCode\": \"sv\",\n            \"Title\": null,\n            \"Uri\": \"muph-sv.aspx\",\n            \"UriSegment\": \"muph\",\n            \"Description\": null,\n            \"Keywords\": null\n        }\n    ],\n    \"PublishStatuses\": [\n        {\n            \"Language\": \"sv\",\n            \"IsPublished\": true,\n            \"StartPublish\": \"2015-04-22T11:48:27Z\",\n            \"StopPublish\": \"2025-04-22T11:48:27Z\"\n        }\n    ],\n    \"Code\": \"muph_1\",\n    \"Name\": \"muph\",\n    \"StartDate\": \"2015-04-22T11:48:27Z\",\n    \"EndDate\": \"2025-04-22T11:48:27Z\",\n    \"MetaClass\": \"FashionProduct\",\n    \"Catalog\": \"Fashion\",\n    \"Prices\": [],\n    \"EntryType\": \"Product\",\n    \"ChildCatalogEntries\": [],\n    \"InventoryStatus\": null,\n    \"WarehouseInventories\": [],\n    \"Associations\": [],\n    \"Assets\": [],\n    \"Nodes\": [],\n    \"Variation\": null,\n    \"Dimension\": null\n}"
+    },
+    "url": {
+      "raw": "{{SiteUrl}}/episerverapi/commerce/entries/"
+    }
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  }
+}

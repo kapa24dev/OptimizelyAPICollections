@@ -1,0 +1,39 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "method": "POST",
+    "header": [
+      {
+        "key": "Content-Type",
+        "value": "application/json"
+      },
+      {
+        "key": "Authorization",
+        "value": "bearer {{AccessToken}}"
+      },
+      {
+        "key": "Accept",
+        "value": "application/json"
+      }
+    ],
+    "body": {
+      "mode": "raw",
+      "raw": "{\n  \"StartDate\": \"2017-03-21T07:59:22.4530334Z\",\n  \"EndDate\": \"2019-03-21T07:59:22.4520318Z\",\n  \"Name\": \"Viet Anh\",\n  \"IsPrimary\": \"true\",\n  \"DefaultCurrency\": \"usd\",\n  \"DefaultLanguage\": \"en\",\n  \"WeightBase\": \"lbs\",\n  \"Catalog\": \"Viet Anh\",\n  \"UriSegment\": \"fashion2\"\n}\n"
+    },
+    "url": {
+      "raw": "{{SiteUrl}}/episerverapi/commerce/catalogs/commondraft/en"
+    },
+    "description": "Column 'Name' doesn't allow null."
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  }
+}

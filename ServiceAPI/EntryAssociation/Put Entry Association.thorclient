@@ -1,0 +1,38 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "method": "PUT",
+    "header": [
+      {
+        "key": "Content-Type",
+        "value": "application/json"
+      },
+      {
+        "key": "Authorization",
+        "value": "bearer {{AccessToken}}"
+      },
+      {
+        "key": "Accept",
+        "value": "application/json"
+      }
+    ],
+    "body": {
+      "mode": "raw",
+      "raw": "    {\n        \"SortOrder\": 0,\n        \"Name\": \"CrossSell\",\n        \"CatalogEntryCode\": \"Tops-Tunics-CowlNeck-Black-Small\",\n        \"Description\": \"Related Product\",\n        \"EntryAssociations\": [\n            {\n                \"SortOrder\": 310,\n                \"Type\": \"Default\",\n                \"CatalogEntryCode\": \"Tops-Tunics-CowlNeck-Black-ExtraLarge\",\n                \"Entry\": {\n                    \"Title\": \"Tops-Tunics-CowlNeck-Black-ExtraLarge\",\n                    \"Type\": \"CatalogEntry\",\n                    \"Href\": \"/episerverapi/commerce/entries/Tops-Tunics-CowlNeck-Black-ExtraLarge\",\n                    \"Properties\": null\n                }\n            },\n            {\n                \"SortOrder\": 400,\n                \"Type\": \"Default\",\n                \"CatalogEntryCode\": \"Bottoms-Shorts-Boxers-Pink-Large\",\n                \"Entry\": {\n                    \"Title\": \"Bottoms-Shorts-Boxers-Pink-Large\",\n                    \"Type\": \"CatalogEntry\",\n                    \"Href\": \"/episerverapi/commerce/entries/Bottoms-Shorts-Boxers-Pink-Large\",\n                    \"Properties\": null\n                }\n            }\n        ]\n    }"
+    },
+    "url": {
+      "raw": "{{SiteUrl}}/episerverapi/commerce/entries/{{DefaultEntryCode}}/CrossSell"
+    }
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  }
+}

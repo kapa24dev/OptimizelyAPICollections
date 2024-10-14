@@ -1,0 +1,38 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "method": "DELETE",
+    "header": [
+      {
+        "key": "Content-Type",
+        "value": "application/json"
+      },
+      {
+        "key": "Authorization",
+        "value": "bearer {{AccessToken}}"
+      },
+      {
+        "key": "Accept",
+        "value": "application/json"
+      }
+    ],
+    "body": {
+      "mode": "raw",
+      "raw": "{\n    \"Code\": \"SampleNode_1\",\n    \"ParentNodeCode\": \"mens\",\n    \"LanguageCode\": \"sv\",\n    \"Name\": \"SampleNode\",\n    \"StartDate\": \"2018-05-17T04:38:00.55Z\",\n    \"EndDate\": \"2028-05-17T04:38:00.55Z\",\n    \"IsActive\": false,\n    \"MetaClass\": \"FashionNode\",\n    \"Catalog\": \"Fashion\",\n    \"SortOrder\": 0,\n    \"ParentNode\": null,\n    \"MetaFields\": [\n        {\n            \"Name\": \"DisplayName\",\n            \"Type\": \"ShortString\",\n            \"Data\": [\"SampleNode\"]\n        },\n        {\n            \"Name\": \"Epi_IsPublished\",\n            \"Type\": \"Boolean\",\n            \"Data\": []\n        },\n        {\n            \"Name\": \"Epi_StartPublish\",\n            \"Type\": \"DateTime\",\n            \"Data\": []\n        },\n        {\n            \"Name\": \"Epi_StopPublish\",\n            \"Type\": \"DateTime\",\n            \"Data\": []\n        }\n    ],\n    \"SeoInformation\": \n    {\n        \"Title\": null,\n        \"Uri\": \"SampleNode-en.aspx\",\n        \"UriSegment\": \"samplenode1\",\n        \"Description\": null,\n        \"Keywords\": null,\n            \"LanguageCode\": \"sv\"\n\t}\n    ,\n    \"Assets\": [],\n    \"Children\": [],\n    \"Entries\": []\n}"
+    },
+    "url": {
+      "raw": "{{SiteUrl}}/episerverapi/commerce/nodes/SampleNode_1/commondraft/en"
+    }
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  }
+}

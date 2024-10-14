@@ -1,0 +1,39 @@
+{
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "request": {
+    "method": "POST",
+    "header": [
+      {
+        "key": "Content-Type",
+        "value": "application/json"
+      },
+      {
+        "key": "Authorization",
+        "value": "bearer {{AccessToken}}"
+      },
+      {
+        "key": "Accept",
+        "value": "application/json"
+      }
+    ],
+    "body": {
+      "mode": "raw",
+      "raw": "{\n  \"StartDate\": \"2017-03-21T07:59:22.4530334Z\",\n  \"EndDate\": \"2019-03-21T07:59:22.4520318Z\",\n  \"Name\": \"Viet Anh\",\n  \"IsActive\": \"true\",\n  \"IsPrimary\": \"false\",\n  \"DefaultCurrency\": \"usd\",\n  \"DefaultLanguage\": \"abc\",\n  \"WeightBase\": \"lbs\",\n  \"LANGUAGES\": [\n    {\n      \"LANGUAGECODE\": \"EN\",\n      \"CATALOG\": \"VIET ANH\",\n      \"URISEGMENT\": \"FASHION2\"\n    }\n  ]\n}"
+    },
+    "url": {
+      "raw": "{{SiteUrl}}/episerverapi/commerce/catalogs"
+    },
+    "description": "Column 'Name' doesn't allow null."
+  },
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  }
+}

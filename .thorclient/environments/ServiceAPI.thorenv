@@ -1,0 +1,38 @@
+{
+  "variables": [
+    {
+      "id": "2f75fcab-835d-4831-af31-8d48b4a6bba4",
+      "key": "AccessToken",
+      "disabled": false,
+      "type": "text",
+      "privacy": "PRIVATE",
+      "value": ""
+    },
+    {
+      "id": "c7de497a-123e-4b64-a9ad-cc6e42262222",
+      "key": "SiteUrl",
+      "value": "https://localhost:5000/",
+      "disabled": false,
+      "type": "text",
+      "updated": 1727591394981,
+      "updateSource": "ENVIRONMENT",
+      "privacy": "PUBLIC"
+    },
+    {
+      "id": "7a2a0421-9060-44c1-b899-9b7e72a32125",
+      "key": "DefaultEntryCode",
+      "value": "",
+      "disabled": false,
+      "type": "text",
+      "privacy": "PUBLIC"
+    },
+    {
+      "id": "6e9c5d8f-5154-4239-8c5f-e8ed6ceb0c0a",
+      "key": "TaskId",
+      "value": "",
+      "disabled": false,
+      "type": "text",
+      "privacy": "PRIVATE"
+    }
+  ]
+}
