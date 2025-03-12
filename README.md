@@ -2,6 +2,8 @@
 API Collections for Optimizely, you could set up the Foundation site to run along with those collections:
 https://github.com/episerver/Foundation
 
+API Client: https://www.thorclient.com/
+
 ## How to Use
 - Clone the repository 
 - Open repository folder in VSCode, there will a popup showed that recommend you to install Thor Client
