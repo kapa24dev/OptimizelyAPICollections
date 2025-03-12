@@ -1,0 +1,102 @@
+{
+  "request": {
+    "method": "POST",
+    "name": "https://localhost:5000/EPiServer/Commerce/Organizations/Search",
+    "url": {
+      "raw": "https://localhost:5000/EPiServer/Commerce/Organizations/Search"
+    },
+    "header": [
+      {
+        "key": "User-Agent",
+        "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0"
+      },
+      {
+        "key": "Accept",
+        "value": "*/*"
+      },
+      {
+        "key": "Accept-Encoding",
+        "value": "gzip, deflate, br, zstd"
+      },
+      {
+        "key": "Accept-Language",
+        "value": "en-US,en;q=0.9"
+      },
+      {
+        "key": "Origin",
+        "value": "https://localhost:5000"
+      },
+      {
+        "key": "Priority",
+        "value": "u=1, i"
+      },
+      {
+        "key": "Referer",
+        "value": "https://localhost:5000/EPiServer/Commerce/customers?menu=organization"
+      },
+      {
+        "key": "RequestVerificationToken",
+        "value": "CfDJ8CvqOej_ewlJioETcQv7VTaF5rFB7KKr_tj58QkEL7BTe-bGhIvvVWD5jvk-NTPhpcI0bCrtNvI9uoZuSVsQBFRzd9mQ9VjtdCsrjiroymEml49fEfucDOYZxTRENHhEsZ__8EDgHKSEGsP57RWWYbEGlT-Vltw7MpoIDG4gIzu_XzTzcFoC8pmoXS7do5Kj0g"
+      },
+      {
+        "key": "Sec-Ch-Ua",
+        "value": "\"Not(A:Brand\";v=\"99\", \"Microsoft Edge\";v=\"133\", \"Chromium\";v=\"133\""
+      },
+      {
+        "key": "Sec-Ch-Ua-Mobile",
+        "value": "?0"
+      },
+      {
+        "key": "Sec-Ch-Ua-Platform",
+        "value": "\"Windows\""
+      },
+      {
+        "key": "Sec-Fetch-Dest",
+        "value": "empty"
+      },
+      {
+        "key": "Sec-Fetch-Mode",
+        "value": "cors"
+      },
+      {
+        "key": "Sec-Fetch-Site",
+        "value": "same-origin"
+      },
+      {
+        "key": "Content-Type",
+        "value": "application/json"
+      },
+      {
+        "key": "Cookie",
+        "value": "GridPageSize_LeftMenuItem-List=50; epi_RecommendationsTrackingUserId=cuid%253D6837941051%257Cb6qwwObggB2jy49f6TeTln2uj_K9pj7iqIXbpPJFTyQ%2526h%253D50AE38F6; EPiServer_Commerce_AnonymousId=ee19bac3-b12e-432a-a88c-c7b02aa02613; Language=en; AcceptedCookies=1; GridPageSize_Node-List=20; GridPageSize_Currencies-List=2147483647; BrowseHistory=P-39813617%5E%21%21%5EP-42518256%5E%21%21%5EP-36127195%5E%21%21%5EP-39850363%5E%21%21%5EP-21320040%5E%21%21%5EP-43093280%5E%21%21%5EP-40977269%5E%21%21%5EP-41071811%5E%21%21%5EP-22471487%5E%21%21%5EP-38193107; .ASPXANONYMOUS=KTI0kmJxXLTaVS_9mB2u8heC4TMvmBeTuSUgem8CAWi0yvwa1L--QVW_PhntaTdo_qqULW4-ZzbZd88WMaduvWbr-RlyYbu5TKzb4UdO9zqfTdCrhro2CxZ7NzkCOdHbSW5rW2vec2im60vpkoXSOw2; EPiStateMarker=true; .AspNetCore.Antiforgery.Kbq52yaV124=CfDJ8CvqOej_ewlJioETcQv7VTanrHCVz9QfhXrs0HmBoTba6dACjM_tgq4zeHyYlys5Ctsl0ZutviDkdDxzcemEk5H4JKAicdC82_c5MIrv1ofMK7qr9VfHfgVicjB2733nQo_TdWJ7Zggf0e6R3Eq0XZY; EPiSessionId=4ed6e513-36e4-48ee-8928-7976f6cc396e; .AspNetCore.Identity.Application=CfDJ8CvqOej_ewlJioETcQv7VTYmYKmuA2v7u8VqUdmgZ3jXcezP2es5QyiZim-Bb5Sik6QihSBKSvkN6IZ20b5gcWf47zSeYXKQaD4AlxjFFNiomtDOC4kb2Bt9CSHi09jEXRDGUqkDi-Z6nckPJmiDQ-OGeuAlxl5y45cWCbnep83F0AMrJV97vDr00qM5SettavHVvoKxqk3QDQjPyYO6zZoWn5iIxACG7SzvB6urnuqMcdTu18nO6tndZwnKA56Y0IlGBqC2HQ0Ykfc0hGnbwEkWRDUHN-o_qKrCOxbGB_BQC69yUOMCF_Y4mRCRrDKyZkpsfc-W7jZFRlzlRQVJJcNXgBeYTkCtVUHnva1cza-np51CyOdEz-AxkDjZOwiuVAPaXzy7FfjWSxEVvsVzEXe6ajl_SYBH2yHaChvVKEw5-odw9HI4k0HReHoG5aRrVnT2E6PzBVsQe3z6RtIPTwymf02uHw7nAVQJVKKQ0QZUa358hpYSipfrCHdKY0N22YrrqtlfQp8lwm2kCFuSaII-8FKNuM9Asr4ZKTSpmRFaYufZdWnle3GcJTM3nP7_54CCgC_1xiCBuAeY63ensjiyUKs818gJvixo347EAZijoCTOU_5QgnObOxTWlsvX1jc65PrfQ9L940ejTxWcuETWS_btKFbE_c51nE-aUwr_"
+      }
+    ],
+    "body": {
+      "mode": "raw",
+      "raw": "{\r\n  \"viewId\": 0,\r\n  \"keyword\": \"testnumb\",\r\n  \"sortField\": \"name\",\r\n  \"sortType\": 0,\r\n  \"startIndex\": 0,\r\n  \"recordsToRetrieve\": 25,\r\n  \"excludedOrgId\": \"2fb3117e-8aa0-469d-b0ff-56dd1a3329bf\",\r\n  \"filterCollection\": [],\r\n  \"searchFields\": [],\r\n  \"query\": \"testnumb\"\r\n}",
+      "options": {
+        "raw": {
+          "language": "json"
+        }
+      }
+    }
+  },
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  },
+  "response": {
+    "keys": [
+      "organizations",
+      "totalRecords"
+    ]
+  }
+}
