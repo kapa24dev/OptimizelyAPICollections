@@ -1,0 +1,45 @@
+{
+  "request": {
+    "method": "POST",
+    "name": "https://es-eu-dev-api01.episerver.net/uQxVnGB76qY4hX7VtF8nf5XD0s3m4v08/episerverab_index77746/_search",
+    "url": {
+      "raw": "{{FindURL}}/_search",
+      "query": []
+    },
+    "header": [
+      {
+        "key": "Content-Type",
+        "value": "application/json"
+      }
+    ],
+    "body": {
+      "mode": "raw",
+      "raw": "{\n  \"size\": 100, \n  \"from\": 0,  \n  \"filtered\": {\n      \"query\": {\n          \"constant_score\": {\n              \"filter\": {\n                  \"and\": [\n                      {\n                          \"range\": {\n                              \"GetTimestamp$$date\": {\n                                  \"from\": \"2025-03-15T00:00:00Z\",\n                                  \"include_lower\": true,\n                                  \"include_upper\": false\n                              }\n                          }\n                      },\n                      {\n                          \"or\": [\n                              {\n                                  \"term\": {\n                                      \"___types\": \"Foundation.Features.CatalogContent.Product.GenericProduct\"\n                                  }\n                              },\n                              {\n                                  \"term\": {\n                                      \"___types\": \"Foundation.Features.CatalogContent.Product.GenericVariant\"\n                                  }\n                              }\n                          ]\n                      }\n                  ]\n              }\n          }\n      },\n      \"filter\": {\n          \"term\": {\n              \"___types\": \"EPiServer.Core.IContent\"\n          }\n      }\n  },\n  \"_source\": [\n      \"Code$$string\",\n      \"GetTimestamp$$date\"\n  ]\n}",
+      "options": {
+        "raw": {
+          "language": "json"
+        }
+      }
+    }
+  },
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  },
+  "response": {
+    "keys": [
+      "took",
+      "timed_out",
+      "_shards",
+      "hits"
+    ]
+  }
+}
