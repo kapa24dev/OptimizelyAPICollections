@@ -11,10 +11,10 @@
     {
       "id": "c7de497a-123e-4b64-a9ad-cc6e42262222",
       "key": "SiteUrl",
-      "value": "https://localhost:5000/",
+      "value": "https://localhost:5000",
       "disabled": false,
       "type": "text",
-      "updated": 1727591394981,
+      "updated": 1751274261634,
       "updateSource": "ENVIRONMENT",
       "privacy": "PUBLIC"
     },
