@@ -13,9 +13,11 @@
       "mode": "formdata",
       "formdata": [
         {
-          "key": "",
+          "id": "421c2c34-db70-4f0f-aa41-79e580e316e7",
+          "key": "test2",
+          "disabled": false,
           "type": "file",
-          "src": "/D:/20170515_DS/Tickets/839359/CatalogWithInvalidMetaClass.zip"
+          "src": "ServiceAPI/ImportFiles/MediaImportSample_create/MediaImportSample_create.zip"
         }
       ]
     },
@@ -32,6 +34,11 @@
         "type": "text",
         "operator": "=="
       }
+    ]
+  },
+  "response": {
+    "keys": [
+      "message"
     ]
   }
 }
