@@ -1,0 +1,57 @@
+{
+  "request": {
+    "method": "POST",
+    "name": "https://example.com/_cms/preview2/oauth/token",
+    "url": {
+      "raw": "{{OPTIMIZELY_CMS_URL}}/_cms/preview2/oauth/token",
+      "query": []
+    },
+    "header": [
+      {
+        "key": "accept",
+        "value": "application/json"
+      },
+      {
+        "key": "content-type",
+        "value": "application/json"
+      }
+    ],
+    "body": {
+      "mode": "raw",
+      "raw": "\n{\n  \"client_id\": \"\",\n  \"client_secret\": \"\",\n  \"grant_type\": \"client_credentials\"\n}\n",
+      "options": {
+        "raw": {
+          "language": "json"
+        }
+      }
+    }
+  },
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ],
+    "setvars": [
+      {
+        "id": "de575b2a-b4e3-40bd-9ffd-ef4b954ea82b",
+        "key": "AccessToken",
+        "value": "response.data.access_token",
+        "disabled": false,
+        "type": "text"
+      }
+    ]
+  },
+  "response": {
+    "keys": [
+      "access_token",
+      "expires_in",
+      "token_type"
+    ]
+  }
+}
