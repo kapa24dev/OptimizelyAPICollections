@@ -1,0 +1,79 @@
+{
+  "request": {
+    "method": "POST",
+    "name": "https://cg.optimizely.com/content/v2?stored=false&cache=true&omit_empty=false&authMode=epi-single&unique=false",
+    "url": {
+      "raw": "https://cg.optimizely.com/content/v2?stored=false&cache=true&omit_empty=false&authMode=epi-single&unique=false&auth={{OPTIMIZELY_GRAPH_SINGLE_KEY}}",
+      "query": [
+        {
+          "id": "d3769de2-d981-490b-b5b0-2ac76733ade6",
+          "key": "unique",
+          "value": "false",
+          "disabled": false,
+          "type": "string",
+          "isFound": true
+        },
+        {
+          "id": "255bb4c9-640b-4e3b-a8b6-6d479f608500",
+          "key": "cache",
+          "value": "true",
+          "disabled": false,
+          "type": "string",
+          "isFound": true
+        },
+        {
+          "id": "fd35cbc5-3d9e-40ed-90e2-f29ddc832abb",
+          "key": "authMode",
+          "value": "epi-single",
+          "disabled": false,
+          "type": "string",
+          "isFound": true
+        },
+        {
+          "id": "fb4ac8be-5bb2-4690-8f10-d0db5b6c0884",
+          "key": "auth",
+          "value": "{{OPTIMIZELY_GRAPH_SINGLE_KEY}}",
+          "disabled": false,
+          "type": "text",
+          "isFound": true
+        }
+      ]
+    },
+    "header": [
+      {
+        "id": "8d9e05da-3add-4345-aedd-e44393d1b1b7",
+        "key": "Content-Type",
+        "value": "application/json",
+        "disabled": false,
+        "type": "text"
+      }
+    ],
+    "body": {
+      "mode": "raw",
+      "raw": "{\n    \"query\": \"query getContentByPath($path: [String!]!, $locale: [Locales!], $siteId: String, $changeset: String = null) { content: _Content( where: {_metadata: {url: {default: {in: $path}, base: {eq: $siteId}}, changeset: {eq: $changeset}}} locale: $locale ) { total items: item { ...IContentData ...PageData } } } fragment IContentData on _IContent { _metadata { ...IContentInfo } _type: __typename } fragment PageData on _IContent { ...IContentData } fragment IContentInfo on IContentMetadata { key locale types displayName version url { ...LinkData } } fragment LinkData on ContentUrl { base default }\",\n    \"variables\": {\n      \"path\": [\"/\"],\n      \"siteId\": null,\n      \"locale\": null\n    }\n  }",
+      "options": {
+        "raw": {
+          "language": "json"
+        }
+      }
+    }
+  },
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ]
+  },
+  "response": {
+    "keys": [
+      "data",
+      "extensions"
+    ]
+  }
+}
