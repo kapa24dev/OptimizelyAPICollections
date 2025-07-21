@@ -1,0 +1,48 @@
+{
+  "request": {
+    "method": "GET",
+    "name": "https://example.com/_cms/preview2/contenttypes",
+    "url": {
+      "raw": "{{OPTIMIZELY_CMS_URL}}/_cms/preview2/contenttypes",
+      "query": []
+    },
+    "header": [
+      {
+        "id": "6eb495b0-ca19-412d-985b-7c963783e178",
+        "key": "accept",
+        "value": "application/json",
+        "disabled": false,
+        "type": "text"
+      },
+      {
+        "id": "5ee98ac1-395e-40a1-8045-9de17eab3d57",
+        "key": "Authorization",
+        "value": "bearer {{AccessToken}}",
+        "disabled": false,
+        "type": "text"
+      }
+    ],
+    "body": {}
+  },
+  "readme": "To open this file inside VSCode, you need to install Thor Client extension https://thorclient.com/",
+  "event": {
+    "assert": [
+      {
+        "key": "response.status",
+        "value": "200",
+        "disabled": false,
+        "type": "text",
+        "operator": "=="
+      }
+    ],
+    "setvars": []
+  },
+  "response": {
+    "keys": [
+      "items",
+      "pageIndex",
+      "pageSize",
+      "totalItemCount"
+    ]
+  }
+}

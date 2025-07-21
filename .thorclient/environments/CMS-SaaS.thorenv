@@ -1,0 +1,36 @@
+{
+  "variables": [
+    {
+      "id": "44afcfbd-6468-413e-a8e7-1956bb78cf2c",
+      "key": "OPTIMIZELY_CMS_URL",
+      "disabled": false,
+      "type": "text",
+      "privacy": "PRIVATE",
+      "value": ""
+    },
+    {
+      "id": "24569ae2-53d0-4cf9-a73d-31d391cc96af",
+      "key": "OPTIMIZELY_GRAPH_SECRET",
+      "disabled": false,
+      "type": "text",
+      "privacy": "PRIVATE",
+      "value": ""
+    },
+    {
+      "id": "42d7cc19-17c7-4129-8fa1-57b677e09516",
+      "key": "OPTIMIZELY_GRAPH_KEY",
+      "disabled": false,
+      "type": "text",
+      "privacy": "PRIVATE",
+      "value": ""
+    },
+    {
+      "id": "29f52fc3-6015-41e4-a24d-fc78b9bfdec3",
+      "key": "AccessToken",
+      "disabled": false,
+      "type": "text",
+      "privacy": "PRIVATE",
+      "value": ""
+    }
+  ]
+}
